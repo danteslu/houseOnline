@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp1 (http://www.altova.com) by Samuel Feng (EMBRACE) -->
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	jxb:version="2.0"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="houseDetail">
+		<xs:annotation>
+			<xs:documentation source="label">房屋信息</xs:documentation>
+			<xs:documentation source="className">com.houseOnline.model.HouseDetail</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="houseId" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">ID</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="subject" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">主题</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="address" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">地址</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="vestAddr" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">大堂地址</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="quantity" type="xs:int" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">数量</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>				
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="houseType" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">房屋类型</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="roomType" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">房间结构</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="size" type="xs:int" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">大小</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="bedNum" type="xs:int" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">床数量</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="preferredPerson" type="xs:int" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">建议人数</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="photoPath" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation source="label">图片地址</xs:documentation>
+						<xs:appinfo>
+							<jxb:property name="photoPaths"/>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="houseDesc" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">房屋简介</xs:documentation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Facility" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation source="label">设施</xs:documentation>
+						<xs:appinfo>
+							<jxb:property name="facilities"/>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Configuration" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation source="label">配置</xs:documentation>
+						<xs:appinfo>
+							<jxb:property name="configurations"/>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Service" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation source="label">服务</xs:documentation>
+						<xs:appinfo>
+							<jxb:property name="services"/>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Other" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation source="label">其他</xs:documentation>
+						<xs:appinfo>
+							<jxb:property name="others"/>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Community" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">小区介绍</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="houseWrap" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">周边介绍</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Facility">
+		<xs:annotation>
+			<xs:documentation source="className">com.houseOnline.model.Facility</xs:documentation>
+			<xs:documentation source="label">��ʩ</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">项目名</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+					<xs:element name="value" type="xs:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">项目值</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Configuration">
+		<xs:annotation>
+			<xs:documentation source="className">com.houseOnline.model.Configuration</xs:documentation>
+			<xs:documentation source="label">��ʩ</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�豸��</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+					<xs:element name="value" type="xs:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�Ƿ����</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Service">
+		<xs:annotation>
+			<xs:documentation source="className">com.houseOnline.model.Service</xs:documentation>
+			<xs:documentation source="label">��ʩ</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�豸��</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+					<xs:element name="value" type="xs:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�Ƿ����</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Other">
+		<xs:annotation>
+			<xs:documentation source="className">com.houseOnline.model.Other</xs:documentation>
+			<xs:documentation source="label">��ʩ</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�豸��</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="value" type="xs:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�Ƿ����</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Community">
+		<xs:annotation>
+			<xs:documentation source="className">com.houseOnline.model.Community</xs:documentation>
+			<xs:documentation source="label">��ʩ</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="photoPath" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�豸��</xs:documentation>
+						<xs:appinfo>
+							<jxb:property name="photoPaths"/>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="desc" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�Ƿ����</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="traffic" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�Ƿ����</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="feature" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�Ƿ����</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="securityMeasure" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�Ƿ����</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="supportFacility" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="label">�Ƿ����</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Facility" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation source="label">其他</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

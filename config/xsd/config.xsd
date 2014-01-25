@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp1 (http://www.altova.com) by Samuel 
+	Feng (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="application">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ip" type="xs:string" minOccurs="0" />
+				<xs:element name="code" type="xs:int" minOccurs="0" />
+				<xs:element name="base" type="xs:string" minOccurs="0" />
+				<xs:element name="debug" type="xs:boolean" minOccurs="0" />
+				<xs:element ref="robot" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element ref="support" minOccurs="0" />
+				<xs:element ref="mongoServer" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="mongoDBName" type="xs:string"
+					minOccurs="0" />
+				<xs:element name="dataPath" type="xs:string" minOccurs="0" />
+				<xs:element name="phantomjsPath" type="xs:string"
+					minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="robot">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="cron" type="xs:string" />
+				<xs:element name="implClass" type="xs:string" />
+				<xs:element ref="param" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="param">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="value" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="support">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="email" type="xs:string" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="mongoServer">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="host" type="xs:string" />
+				<xs:element name="port" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+
+

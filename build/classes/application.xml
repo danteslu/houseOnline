@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+	<ip>127.0.0.1</ip>
+	<!-- 当前web应用的代码，不同的应用必须不一样，尤其是同一部服务器上的多个应用，否则就有可能生成相同的id -->
+	<code>1</code>
+	<!-- Web应用的路径 -->
+	<base><![CDATA[http://localhost:8080/sample/]]></base>
+	<!-- 调试标志 -->
+	<debug>true</debug>
+	<robot>
+		<name>Daily Robot</name>
+		<cron>0 0 * * * ?</cron>
+		<implClass>com.fengweimin.robot.DailyRobot</implClass>
+	</robot>
+	<!-- support> <email></email> </support -->
+	<!-- MongoDB服务器配置 -->
+	<mongoServer>
+		<host>localhost</host>
+		<port>27017</port>
+	</mongoServer>
+	<mongoDBName>sample</mongoDBName>
+	<!-- 用于存储某些不那么重要的数据文件的路径，重要数据请放入数据库中 -->
+	<dataPath><![CDATA[C:/Program Files/mongodb/data]]></dataPath>
+</application>

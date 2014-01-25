@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<project name="your_porject_name">
+	<target name="generate-jaxb-code">
+	    <java classname="com.sun.tools.internal.xjc.XJCFacade">
+	            <arg value="-p" />
+	            <arg value="com.example"/>
+	            <arg value="xsd/sample.xsd" />
+	    </java>
+	</target>
+</project>

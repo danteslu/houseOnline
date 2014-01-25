@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="user">
+		<xs:annotation>
+			<xs:documentation source="label">用户信息</xs:documentation>
+			<xs:documentation source="className">com.fengweimin.model.User</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:string" />
+				<xs:element name="email" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="password" type="xs:string" minOccurs="0" />
+				<xs:element name="name" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
+				<xs:element name="regTime" type="xs:dateTime"/>
+
+				<xs:element name="head" type="xs:string" minOccurs="0"
+					maxOccurs="unbounded" />
+					
+				<xs:element name="role" minOccurs="1" maxOccurs="unbounded" />
+
+				<xs:element ref="geometry" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="geometry">
+		<xs:annotation>
+			<xs:documentation source="className">com.fengweimin.model.Geometry</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="xs:string" name="name">
+					<xs:annotation>
+						<xs:documentation source="index">true</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

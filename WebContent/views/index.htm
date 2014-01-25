@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Bootstrap styles -->
+<link href="${base}/css/bootstrap.min.css" rel="stylesheet">
+<link href="${base}/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+<!-- Application styles -->
+<link href="${base}/css/style.css" rel="stylesheet">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="brand" href="#">Sample Project</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">Nav header</li>
+								<li><a href="#">Separated link</a></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul></li>
+					</ul>
+					<form class="navbar-form pull-right">
+						<input class="span2" type="text" placeholder="Email"> <input
+							class="span2" type="password" placeholder="Password">
+						<button type="submit" class="btn">Sign in</button>
+					</form>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+
+	<div class="container" style="margin-top: 60px;">
+
+		<h2>About this sample project</h2>
+		<p>This sample project is to demonstrate a simple web framework,
+			which is fully written in java. It has a three-tier architecture.</p>
+		<ul>
+			<li>Presentation Layer: <a href="http://getbootstrap.com/2.3.2/"
+				target="_blank">Bootstrap2</a> + <a href="http://jquery.com/"
+				target="_blank">JQuery</a></li>
+			<li>Logical layer: <a href="http://struts.apache.org/"
+				target="_blank">Struts2</a> + <a
+				href="http://projects.spring.io/spring-security/" target="_blank">Spring
+					Security</a></li>
+			<li>Persistence Layer: CRUD + <a href="http://memcached.org/"
+				target="_blank">Memcached</a> + <a href="http://www.mongodb.org/"
+				target="_blank">MongoDB</a></li>
+		</ul>
+		<p>We can use it to quickly build easily maintainable and
+			extensible business web applications.</p>
+
+		<hr class="bs-docs-separator">
+		<h2>About presentation layer</h2>
+		<p>Bootstrap is a powerful front-end framework for faster and
+			easier web development. It contains a 12-column responsive grid,
+			dozens of components, JavaScript plugins, typography, form controls.
+			Except for JQuery, underscore.js is used. It is a utility-belt
+			library for JavaScript that provides a lot of the functional
+			programming support on collections, arrays and javascript templating.</p>
+		<p>Generally, We use bootstrap to build static web page quickly
+			and use jquery + underscore.js to add interface interaction. Then we
+			will change the static pages to freemarker pages.</p>
+
+		<hr class="bs-docs-separator">
+		<h2>About logical layer</h2>
+		<p>Logical layer is built on struts2, which is a MVC framework.</p>
+		<ul>
+			<li>Models should always be defined in xml schema(.xsd), then
+				generate them into java bean objects by castor.</li>
+			<li>Views should always be built with <a
+				href="http://struts.apache.org/release/2.3.x/docs/freemarker.html"
+				target="_blank">freemarker</a>, which is a Java-based template
+				engine that is a great alternative to JSP. Other result types are
+				supported, such as json or XML.
+				<ul>
+					<li><a href="${base}/demo/" target="_blank">Freemaker demo</a>,
+						please refer to DemoAction.returnPage().</li>
+					<li><a href="${base}/demo/json" target="_blank">Json demo</a>,
+						please refer to DemoAction.returnJson().</li>
+					<li><a href="${base}/demo/string" target="_blank">String
+							demo</a>, please refer to DemoAction.returnString().</li>
+					<li><a href="${base}/demo/xml" target="_blank">XML demo</a>,
+						please refer to DemoAction.returnXml().</li>
+				</ul>
+			</li>
+			<li>Controllers should always be implemented in struts2 actions.
+				We can use the java bean objects generated from xsd to implement the
+				business logics.</li>
+		</ul>
+		<p>Spring Security is a powerful and highly customizable
+			authentication and access-control framework.</p>
+
+		<hr class="bs-docs-separator">
+		<h2>About persistence layer</h2>
+		<p>The java bean objects generated from xsd will be saved into
+			database directly. MongoDB is used the store documents and indexes.</p>
+		<p>Because MongoDB used memory directly, If you application and db
+			are in one server, no need to setup memcache.</p>
+		<p>
+			Please refer to this demo for simple db access, <a
+				href="${base}/demo/" target="_blank">Demo</a>.
+		</p>
+
+		<hr class="bs-docs-separator">
+		<footer>
+			<p>&copy;2013 Samuel Feng</p>
+		</footer>
+
+	</div>
+	<!-- /container -->
+
+	<!-- Core javascript libs
+    ================================================== -->
+	<script src="${base}/js/jquery-1.10.2.min.js"></script>
+	<script src="${base}/js/bootstrap.min.js"></script>
+
+</body>
+</html>
